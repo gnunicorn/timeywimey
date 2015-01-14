@@ -6,7 +6,9 @@ var React = require('react'),
   RouteHandler = Router.RouteHandler,
   AppBar = mui.AppBar,
   AppCanvas = mui.AppCanvas,
-  AppLeftNav = require('./LeftNav.jsx'),
+  AppLeftNav = require('./LeftNav'),
+  AccountMenu = require('./AccountMenu'),
+  ToolbarGroup = mui.ToolbarGroup,
   RaisedButton = mui.RaisedButton;
 
 var Main = React.createClass({
@@ -22,7 +24,8 @@ var Main = React.createClass({
           onMenuIconButtonTouchTap={this._onMenuIconButtonTouchTap}
           title="TimeyWimey"
           zDepth={0}>
-          <p className='subtitle'>wibbely wobbely time tracking</p>
+          <h2 className='subtitle'>wibbely wobbely time tracking</h2>
+            <AccountMenu />
         </AppBar>
 
         <AppLeftNav ref="leftNav" />

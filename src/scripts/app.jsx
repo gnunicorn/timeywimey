@@ -9,10 +9,6 @@
 
     //Needed for React Developer Tools
     window.React = React;
-    var main = document.getElementById('main');
-
-    console.log(main);
-
     //Needed for onTouchTap
     //Can go away when react 1.0 release
     //Check this repo:
@@ -25,6 +21,6 @@
       scrollBehavior: Router.ScrollToTopBehavior
     })
     .run(function (Handler) {
-      React.render(<Handler/>, main);
+      React.render(<Handler/>, document.getElementById('main'));
     });
 })();

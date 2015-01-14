@@ -5,6 +5,7 @@
   "dependencies": {
     "css-loader": "^0.9.1",
     "file-loader": "^0.8.1",
+    "flux": "^2.0.1",
     "hoodie-plugin-appconfig": "^2.0.1",
     "hoodie-plugin-email": "^1.0.0",
     "hoodie-plugin-users": "^2.1.0",

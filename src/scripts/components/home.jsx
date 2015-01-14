@@ -15,10 +15,11 @@ var Home = React.createClass({
     return (
         <div className="example-page">
 
-          <h1>material-ui</h1>
-          <h2>example project</h2>
+          <h1>Time Tracking</h1>
+          <h2>is a timey wimey <br/> wibbely wobbely</h2>
 
-          <RaisedButton label="Super Secret Password" primary={true} onTouchTap={this._handleTouchTap} />
+          <RaisedButton label='Start Tracking' />
+          <RaisedButton label='Start Tracking' primary={true} onTouchTap={this._handleTouchTap} />
 
         </div>)
   },
