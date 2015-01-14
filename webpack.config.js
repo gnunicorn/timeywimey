@@ -10,13 +10,17 @@ module.exports = {
     },
 
     cache: false,
-    devtool: true,
+    devtool: false,
+    debug: true,
     entry: {'app':
                 ['./src/scripts/app.jsx']
             },
   externals: {
         "jquery": "jQuery",
         "hoodie": "Hoodie"
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   },
   module: {
     preLoaders: [{
@@ -51,6 +55,8 @@ module.exports = {
     }]
   },
   plugins: [
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.PrefetchPlugin("react"),
+    new webpack.PrefetchPlugin("react/lib/ReactComponentBrowserEnvironment")
   ]
 };

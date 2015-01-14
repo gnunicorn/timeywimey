@@ -2,38 +2,37 @@
 var React = require('react'),
   mui = require('material-ui'),
   TimeAgo = require('react-timeago'),
+  Router = require('react-router'),
+  RouteHandler = Router.RouteHandler,
   AppBar = mui.AppBar,
   AppCanvas = mui.AppCanvas,
+  AppLeftNav = require('./LeftNav.jsx'),
   RaisedButton = mui.RaisedButton;
 
 var Main = React.createClass({
+
+  mixins: [Router.State],
 
   render: function() {
 
     return (
       <AppCanvas predefinedLayout={1}>
         <AppBar
-          className="mui-dark-theme"
+          className="mui-light-theme"
           onMenuIconButtonTouchTap={this._onMenuIconButtonTouchTap}
           title="TimeyWimey"
           zDepth={0}>
           <p className='subtitle'>wibbely wobbely time tracking</p>
         </AppBar>
 
-        <div className="example-page">
-
-          <h1>material-ui</h1>
-          <h2>example project</h2>
-
-          <RaisedButton label="Super Secret Password" primary={true} onTouchTap={this._handleTouchTap} />
-
-        </div>
+        <AppLeftNav ref="leftNav" />
+        <RouteHandler />
       </AppCanvas>
     );
   },
 
-  _handleTouchTap: function() {
-    alert('1-2-3-4-5');
+  _onMenuIconButtonTouchTap: function() {
+    this.refs.leftNav.toggle();
   }
 });
 

@@ -1,19 +1,30 @@
+(function () {
 
-var React = require('react'),
-    injectTapEventPlugin = require("react-tap-event-plugin"),
-    MainApp = require('./components/main.jsx')
-    ;
+  var React = require('react'),
+      Router = require('react-router'),
+      injectTapEventPlugin = require("react-tap-event-plugin"),
+      AppRoutes = require('./routes.jsx');
 
-require("../styles/styles.less");
+    require("../styles/styles.less");
 
-console.log(MainApp);
+    //Needed for React Developer Tools
+    window.React = React;
+    var main = document.getElementById('main');
 
-//Needed for onTouchTap
-//Can go away when react 1.0 release
-//Check this repo:
-//https://github.com/zilverline/react-tap-event-plugin
-injectTapEventPlugin();
+    console.log(main);
 
+    //Needed for onTouchTap
+    //Can go away when react 1.0 release
+    //Check this repo:
+    //https://github.com/zilverline/react-tap-event-plugin
+    injectTapEventPlugin();
 
-React.render(<MainApp />,
-    document.getElementById('main'));
+    Router
+    .create({
+      routes: AppRoutes,
+      scrollBehavior: Router.ScrollToTopBehavior
+    })
+    .run(function (Handler) {
+      React.render(<Handler/>, main);
+    });
+})();
