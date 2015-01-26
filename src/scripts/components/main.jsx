@@ -6,9 +6,7 @@ var React = require('react'),
   RouteHandler = Router.RouteHandler,
   AppBar = mui.AppBar,
   AppCanvas = mui.AppCanvas,
-  AppLeftNav = require('./LeftNav'),
   AccountMenu = require('./AccountMenu'),
-  ToolbarGroup = mui.ToolbarGroup,
   RaisedButton = mui.RaisedButton;
 
 var Main = React.createClass({
@@ -18,17 +16,9 @@ var Main = React.createClass({
   render: function() {
 
     return (
-      <AppCanvas predefinedLayout={1}>
-        <AppBar
-          className="mui-light-theme"
-          onMenuIconButtonTouchTap={this._onMenuIconButtonTouchTap}
-          title="TimeyWimey"
-          zDepth={0}>
-          <h2 className='subtitle'>wibbely wobbely time tracking</h2>
-            <AccountMenu />
-        </AppBar>
-
-        <AppLeftNav ref="leftNav" />
+      <AppCanvas>
+        <div className="brand">TimeyWimey</div>
+        <AccountMenu />
         <RouteHandler />
       </AppCanvas>
     );

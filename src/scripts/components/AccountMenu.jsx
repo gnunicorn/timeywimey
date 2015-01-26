@@ -44,7 +44,7 @@ var AccountMenu = React.createClass({
               { text: 'Signup', onClick: this._triggerSignup }
             ];
 
-        return (<div>
+        return (<div className='account-menu'>
             <FlatButton label="Login" onTouchTap={this._showLogin} />
 
             <Dialog
@@ -75,7 +75,7 @@ var AccountMenu = React.createClass({
     var iconMenuItems = [
           { payload: 'logout', text: 'Logout' }
         ];
-    return (<div>{this.state.username}
+    return (<div className="account-menu">{this.state.username}
             <span className="mui-toolbar-separator">&nbsp;</span>
             <FlatButton label="logout" onTouchTap={this._triggerLogout}/></div>);
   },
