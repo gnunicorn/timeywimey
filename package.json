@@ -13,7 +13,6 @@
     "jsx-loader": "^0.12.2",
     "less": "^2.2.0",
     "less-loader": "^2.0.0",
-    "material-ui": "git+https://github.com/callemall/material-ui.git",
     "react": "^0.12.2",
     "react-router": "^0.11.6",
     "react-tap-event-plugin": "^0.1.3",

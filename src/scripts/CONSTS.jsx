@@ -6,5 +6,8 @@ module.exports = {
         SIGNUP: null,
         LOGIN: null,
         LOGOUT: null
+    }),
+    REFRESH:keyMirror({
+        PROJECTS: null,
     })
 }
