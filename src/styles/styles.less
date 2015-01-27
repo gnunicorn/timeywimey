@@ -15,8 +15,27 @@ button.mui-enhanced-button {
     border: 1px solid @border-color;
 }
 
+.page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.adding-entry {
+  margin: 25vh auto;
+  width: 60vw;
+  text-align: left;
+  font-size: 6vh;
+  line-height: 8.5vh;
+  span {
+    margin-right: 0.1em;
+    &.date, &.minutes, &.hours, &.tags {
+      color: @orange-A200;
+    }
+  }
+}
+
 .recorder {
-  margin: 25vh 0;
+  margin: 25vh auto;
   width: 100vw;
   text-align: center;
   button {
@@ -25,6 +44,26 @@ button.mui-enhanced-button {
     border-radius: 25vh;
   }
 }
+
+
+.example-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+}
+
+.example-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+}
+
 
 .brand {
     position: absolute;

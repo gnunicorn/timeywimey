@@ -4,12 +4,14 @@ var React = require('react/addons'),
     Route = Router.Route,
     DefaultRoute = Router.DefaultRoute,
     Main = require('./components/main'),
-    Recorder = require('./components/recoder'),
+    Recorder = require('./components/recorder'),
+    Adding = require('./components/adding'),
     Home = require('./components/home');
 
 var AppRoutes = (
   <Route name="root" path="/" handler={Main}>
-    <DefaultRoute handler={Recorder}/>
+    <Route name="adding" path="/adding" handler={Adding} />
+    <DefaultRoute name="recorder" path="/recorder" handler={Recorder}/>
   </Route>
 );
 
